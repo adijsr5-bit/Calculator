@@ -50,6 +50,11 @@ export const metadata: Metadata = {
     title: "ValuePilot | Free Financial Calculators & Money Planning Tools",
     description: "Use free financial calculators to plan your mortgage, budget, debt payoff, retirement, taxes, car loans and net worth.",
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   verification: {
     google: "ZbuthJm7kqi-5-WV6Z8Dvlvo_udMkHgFFfSTDfuS2uA",
   },
