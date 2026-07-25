@@ -95,6 +95,7 @@ export default function RootLayout({
         <meta name="agentic-browsing-enabled" content="true" />
         <meta name="webmcp-compliant" content="true" />
         <Script
+          id="adsbygoogle-init"
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
           crossOrigin="anonymous"

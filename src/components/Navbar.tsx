@@ -59,11 +59,12 @@ export function Navbar() {
         {/* Brand Logo */}
         <Link href="/" aria-label="ValuePilot Home" className="flex items-center gap-2 group">
           <img
-            src="/logo.png"
+            src="/logo.webp"
             alt="ValuePilot - Plan Better. Calculate Smarter."
-            width={140}
-            height={36}
+            width={120}
+            height={32}
             decoding="async"
+            fetchPriority="high"
             className="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform"
           />
         </Link>

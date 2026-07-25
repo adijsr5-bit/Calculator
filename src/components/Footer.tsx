@@ -63,10 +63,10 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" aria-label="ValuePilot Home" className="flex items-center gap-2 group">
               <img
-                src="/logo.png"
+                src="/logo.webp"
                 alt="ValuePilot - Plan Better. Calculate Smarter."
-                width={150}
-                height={38}
+                width={120}
+                height={32}
                 decoding="async"
                 className="h-9 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform"
               />
@@ -78,8 +78,8 @@ export function Footer() {
           </div>
 
           <div className="space-y-3 text-xs">
-            <h5 className="font-bold text-white uppercase tracking-wider">Calculators</h5>
-            <ul className="space-y-2 text-slate-400">
+            <div className="font-bold text-white uppercase tracking-wider" role="heading" aria-level={3}>Calculators</div>
+            <ul className="space-y-2 text-slate-300">
               <li><Link href="/calculators/mortgage" className="hover:text-white">Mortgage Calculator</Link></li>
               <li><Link href="/calculators/refinance" className="hover:text-white">Refinance Calculator</Link></li>
               <li><Link href="/calculators/car-loan" className="hover:text-white">Car Loan Calculator</Link></li>
@@ -88,8 +88,8 @@ export function Footer() {
           </div>
 
           <div className="space-y-3 text-xs">
-            <h5 className="font-bold text-white uppercase tracking-wider">Resources</h5>
-            <ul className="space-y-2 text-slate-400">
+            <div className="font-bold text-white uppercase tracking-wider" role="heading" aria-level={3}>Resources</div>
+            <ul className="space-y-2 text-slate-300">
               <li><Link href="/blog" className="hover:text-white">Blog & Articles</Link></li>
               <li><Link href="/guides/credit-score" className="hover:text-white">Credit Score Guide</Link></li>
               <li><Link href="/glossary" className="hover:text-white">Finance Glossary</Link></li>
@@ -98,8 +98,8 @@ export function Footer() {
           </div>
 
           <div className="space-y-3 text-xs">
-            <h5 className="font-bold text-white uppercase tracking-wider">Legal</h5>
-            <ul className="space-y-2 text-slate-400">
+            <div className="font-bold text-white uppercase tracking-wider" role="heading" aria-level={3}>Legal</div>
+            <ul className="space-y-2 text-slate-300">
               <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white">Terms of Use</Link></li>
               <li><Link href="/disclaimer" className="hover:text-white">Disclaimer</Link></li>
@@ -108,12 +108,12 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-300">
           <div>© {new Date().getFullYear()} ValuePilot. All rights reserved.</div>
           <div className="flex gap-4">
-            <Link href="/privacy" className="hover:underline">Privacy</Link>
-            <Link href="/terms" className="hover:underline">Terms</Link>
-            <Link href="/disclaimer" className="hover:underline">Disclaimer</Link>
+            <Link href="/privacy" className="hover:underline text-slate-300 hover:text-white font-medium">Privacy</Link>
+            <Link href="/terms" className="hover:underline text-slate-300 hover:text-white font-medium">Terms</Link>
+            <Link href="/disclaimer" className="hover:underline text-slate-300 hover:text-white font-medium">Disclaimer</Link>
           </div>
         </div>
       </div>

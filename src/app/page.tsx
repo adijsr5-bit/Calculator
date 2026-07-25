@@ -87,8 +87,8 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Hero Text */}
           <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-950/60 border border-purple-200/60 dark:border-purple-800/60 text-[#6D5DF6] text-xs font-bold animate-in fade-in duration-300">
-              <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-950/80 border border-purple-300 dark:border-purple-800 text-[#3730A3] dark:text-purple-200 text-xs font-extrabold animate-in fade-in duration-300">
+              <Sparkles className="w-4 h-4 text-amber-500 animate-pulse" />
               <span>ValuePilot Financial Tools & Money Planning</span>
             </div>
 
@@ -124,12 +124,12 @@ export default function HomePage() {
             {/* Social Proof */}
             <div className="flex items-center justify-center lg:justify-start gap-3 pt-4 text-xs text-slate-700 dark:text-slate-300 font-medium">
               <div className="flex -space-x-2">
-                <div className="w-8 h-8 rounded-full bg-[#6D5DF6] text-white font-bold flex items-center justify-center border-2 border-white text-xs">JS</div>
-                <div className="w-8 h-8 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center border-2 border-white text-xs">AK</div>
-                <div className="w-8 h-8 rounded-full bg-amber-500 text-white font-bold flex items-center justify-center border-2 border-white text-xs">MP</div>
+                <div className="w-8 h-8 rounded-full bg-[#4F39F6] text-white font-bold flex items-center justify-center border-2 border-white text-xs">JS</div>
+                <div className="w-8 h-8 rounded-full bg-emerald-700 text-white font-bold flex items-center justify-center border-2 border-white text-xs">AK</div>
+                <div className="w-8 h-8 rounded-full bg-amber-700 text-white font-bold flex items-center justify-center border-2 border-white text-xs">MP</div>
               </div>
               <div>
-                <div className="text-amber-600 font-bold">★★★★★ 4.9/5</div>
+                <div className="text-amber-700 font-bold">★★★★★ 4.9/5</div>
                 <span>Trusted by 250K+ smart investors on ValuePilot</span>
               </div>
             </div>
@@ -360,13 +360,13 @@ export default function HomePage() {
                     100% Free & No Login Needed
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 font-bold border border-emerald-200/60 dark:border-emerald-800">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Yes, Instant Access
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-300 font-extrabold border border-emerald-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-700" /> Yes, Instant Access
                     </span>
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-500 font-semibold border border-rose-200/60 dark:border-rose-800">
-                      <XIcon className="w-4 h-4 text-rose-400" /> Forces email & phone signup
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-100 dark:bg-rose-950 text-rose-950 dark:text-rose-300 font-extrabold border border-rose-300">
+                      <XIcon className="w-4 h-4 text-rose-700" /> Forces email & phone signup
                     </span>
                   </td>
                 </tr>
@@ -376,13 +376,13 @@ export default function HomePage() {
                     Client-Side Private Calculation
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 font-bold border border-emerald-200/60 dark:border-emerald-800">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500" /> 100% Private (No Tracking)
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-300 font-extrabold border border-emerald-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-700" /> 100% Private (No Tracking)
                     </span>
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-500 font-semibold border border-rose-200/60 dark:border-rose-800">
-                      <XIcon className="w-4 h-4 text-rose-400" /> Sells data to mortgage brokers
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-100 dark:bg-rose-950 text-rose-950 dark:text-rose-300 font-extrabold border border-rose-300">
+                      <XIcon className="w-4 h-4 text-rose-700" /> Sells data to mortgage brokers
                     </span>
                   </td>
                 </tr>
@@ -392,13 +392,13 @@ export default function HomePage() {
                     Export PDF & Amortization Print
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 font-bold border border-emerald-200/60 dark:border-emerald-800">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Professional PDF Reports
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-300 font-extrabold border border-emerald-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-700" /> Professional PDF Reports
                     </span>
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-500 font-semibold border border-rose-200/60 dark:border-rose-800">
-                      <XIcon className="w-4 h-4 text-rose-400" /> No PDF export option
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-100 dark:bg-rose-950 text-rose-950 dark:text-rose-300 font-extrabold border border-rose-300">
+                      <XIcon className="w-4 h-4 text-rose-700" /> No PDF export option
                     </span>
                   </td>
                 </tr>
@@ -408,13 +408,13 @@ export default function HomePage() {
                     Dual Strategy Toggle (Snowball vs Avalanche)
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 font-bold border border-emerald-200/60 dark:border-emerald-800">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500" /> Live Interactive Switcher
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-300 font-extrabold border border-emerald-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-700" /> Live Interactive Switcher
                     </span>
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-500 font-semibold border border-rose-200/60 dark:border-rose-800">
-                      <XIcon className="w-4 h-4 text-rose-400" /> Static single scenario only
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-100 dark:bg-rose-950 text-rose-950 dark:text-rose-300 font-extrabold border border-rose-300">
+                      <XIcon className="w-4 h-4 text-rose-700" /> Static single scenario only
                     </span>
                   </td>
                 </tr>
@@ -424,13 +424,13 @@ export default function HomePage() {
                     Unbiased & Ad-Free Interface
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 font-bold border border-emerald-200/60 dark:border-emerald-800">
-                      <CheckCircle2 className="w-4 h-4 text-emerald-500" /> 0% Ads & 0% Bank Affiliates
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-300 font-extrabold border border-emerald-300">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-700" /> 0% Ads & 0% Bank Affiliates
                     </span>
                   </td>
                   <td className="py-4 px-4 text-center">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-50 dark:bg-rose-950/60 text-rose-500 font-semibold border border-rose-200/60 dark:border-rose-800">
-                      <XIcon className="w-4 h-4 text-rose-400" /> Flooded with credit card ads
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-100 dark:bg-rose-950 text-rose-950 dark:text-rose-300 font-extrabold border border-rose-300">
+                      <XIcon className="w-4 h-4 text-rose-700" /> Flooded with credit card ads
                     </span>
                   </td>
                 </tr>
