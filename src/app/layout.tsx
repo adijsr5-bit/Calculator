@@ -5,6 +5,7 @@ import { CurrencyProvider } from "@/context/CurrencyContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { AIAssistantModal } from "@/components/ui/AIAssistantModal";
+import { CookieBanner } from "@/components/ui/CookieBanner";
 
 export const metadata: Metadata = {
   title: {
@@ -65,6 +66,7 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <AIAssistantModal />
+            <CookieBanner />
           </CurrencyProvider>
         </ThemeProvider>
       </body>
