@@ -23,20 +23,19 @@ export function AdSenseScript({ clientId }: { clientId: string }) {
       document.head.appendChild(script);
     };
 
-    // Load after user interaction or 4 seconds idle
+    // Load exclusively on real human user interaction
     window.addEventListener("scroll", loadAdSense, { passive: true });
     window.addEventListener("mousemove", loadAdSense, { passive: true });
     window.addEventListener("touchstart", loadAdSense, { passive: true });
     window.addEventListener("keydown", loadAdSense, { passive: true });
-
-    const timer = setTimeout(loadAdSense, 4000);
+    window.addEventListener("click", loadAdSense, { passive: true });
 
     return () => {
-      clearTimeout(timer);
       window.removeEventListener("scroll", loadAdSense);
       window.removeEventListener("mousemove", loadAdSense);
       window.removeEventListener("touchstart", loadAdSense);
       window.removeEventListener("keydown", loadAdSense);
+      window.removeEventListener("click", loadAdSense);
     };
   }, [clientId]);
 
