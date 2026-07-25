@@ -1,0 +1,73 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { CurrencyProvider } from "@/context/CurrencyContext";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { AIAssistantModal } from "@/components/ui/AIAssistantModal";
+
+export const metadata: Metadata = {
+  title: {
+    default: "Free Financial Calculators & Money Planning Tools | Budget, Mortgage, Debt & Retirement | ValuePilot",
+    template: "%s | ValuePilot",
+  },
+  description:
+    "Use free financial calculators to plan your mortgage, budget, debt payoff, retirement, taxes, car loans and net worth. Accurate, fast and easy-to-use money tools.",
+  keywords: [
+    "financial calculators",
+    "money calculator",
+    "finance calculator",
+    "personal finance tools",
+    "money planning tools",
+    "financial planning calculator",
+    "budget calculator",
+    "free financial calculator",
+    "ValuePilot",
+    "Mortgage Calculator",
+    "Refinance Calculator",
+    "Debt Payoff Planner",
+    "Car Loan Calculator",
+    "401k Match Calculator",
+    "Budget Planner",
+    "Tax Refund Estimator",
+    "Credit Score Guide",
+    "Net Worth Calculator",
+  ],
+  authors: [{ name: "ValuePilot Team" }],
+  metadataBase: new URL("https://valuepilot.app"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://valuepilot.app",
+    title: "Free Financial Calculators & Money Planning Tools | ValuePilot",
+    description:
+      "Use free financial calculators to plan your mortgage, budget, debt payoff, retirement, taxes, car loans and net worth. Accurate, fast and easy-to-use money tools.",
+    siteName: "ValuePilot",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ValuePilot | Free Financial Calculators & Money Planning Tools",
+    description: "Use free financial calculators to plan your mortgage, budget, debt payoff, retirement, taxes, car loans and net worth.",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-[#6D5DF6] selection:text-white">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <CurrencyProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <AIAssistantModal />
+          </CurrencyProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
+}
