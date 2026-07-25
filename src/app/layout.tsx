@@ -50,6 +50,9 @@ export const metadata: Metadata = {
     title: "ValuePilot | Free Financial Calculators & Money Planning Tools",
     description: "Use free financial calculators to plan your mortgage, budget, debt payoff, retirement, taxes, car loans and net worth.",
   },
+  verification: {
+    google: "ZbuthJm7kqi-5-WV6Z8Dvlvo_udMkHgFFfSTDfuS2uA",
+  },
   other: {
     "google-adsense-account": "ca-pub-9657690036702429",
   },
@@ -67,6 +70,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="ZbuthJm7kqi-5-WV6Z8Dvlvo_udMkHgFFfSTDfuS2uA" />
         <meta name="google-adsense-account" content="ca-pub-9657690036702429" />
         <Script
           async
