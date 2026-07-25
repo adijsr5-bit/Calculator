@@ -105,6 +105,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-K9V6GJ4X');`,
           }}
         />
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BJF71Q3R3H"
+          strategy="lazyOnload"
+        />
+        <Script
+          id="google-analytics"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BJF71Q3R3H');
+            `,
+          }}
+        />
         <AdSenseScript clientId={adsenseClientId} />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-[#6D5DF6] selection:text-white max-w-full overflow-x-hidden relative">
