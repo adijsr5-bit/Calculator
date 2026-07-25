@@ -276,7 +276,7 @@ export default function MortgageCalculatorPage() {
                       ))}
                     </Pie>
                     <Tooltip
-                      formatter={(val: number) => formatCurrency(val, currency)}
+                      formatter={(val: any) => formatCurrency(Number(val || 0), currency)}
                       contentStyle={{
                         backgroundColor: "#0F172A",
                         borderColor: "#334155",

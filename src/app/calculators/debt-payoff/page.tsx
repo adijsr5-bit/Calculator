@@ -496,7 +496,7 @@ export default function DebtPayoffPlannerPage() {
                     <XAxis dataKey="year" stroke="#E2DDFE" tick={{ fontSize: 10 }} />
                     <YAxis stroke="#E2DDFE" tick={{ fontSize: 10 }} tickFormatter={(v) => `$${(v/1000).toFixed(0)}k`} />
                     <Tooltip
-                      formatter={(v: number) => [formatCurrency(v, currency), "Balance"]}
+                      formatter={(v: any) => [formatCurrency(Number(v || 0), currency), "Balance"]}
                       labelFormatter={(label) => `Year ${label}`}
                       contentStyle={{
                         backgroundColor: "#0F172A",

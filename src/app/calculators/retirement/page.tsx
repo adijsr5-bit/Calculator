@@ -192,7 +192,7 @@ export default function RetirementCalculatorPage() {
                     <XAxis dataKey="age" tick={{ fontSize: 10 }} />
                     <YAxis tick={{ fontSize: 10 }} tickFormatter={(val) => `$${(val / 1000).toFixed(0)}k`} />
                     <Tooltip
-                      formatter={(val: number) => [formatCurrency(val, currency), "Portfolio Value"]}
+                      formatter={(val: any) => [formatCurrency(Number(val || 0), currency), "Portfolio Value"]}
                       labelFormatter={(label) => `Age ${label}`}
                       contentStyle={{
                         backgroundColor: "#0F172A",
