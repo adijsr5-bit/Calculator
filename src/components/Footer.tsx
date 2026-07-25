@@ -24,7 +24,7 @@ export function Footer() {
         {/* Newsletter Box */}
         <div className="rounded-3xl p-8 bg-slate-900 border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
-            <h4 className="text-xl font-bold text-white">Get financial tips & debt payoff strategies weekly</h4>
+            <h3 className="text-xl font-bold text-white">Get financial tips & debt payoff strategies weekly</h3>
             <p className="text-xs text-slate-400">No spam. Unsubscribe anytime.</p>
           </div>
 
@@ -34,7 +34,11 @@ export function Footer() {
             </div>
           ) : (
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 w-full md:w-auto max-w-md">
+              <label htmlFor="footer-newsletter-email" className="sr-only">
+                Email address for financial newsletter
+              </label>
               <input
+                id="footer-newsletter-email"
                 type="email"
                 required
                 aria-label="Email address for financial newsletter"

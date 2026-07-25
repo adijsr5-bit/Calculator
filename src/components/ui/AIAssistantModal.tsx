@@ -89,8 +89,8 @@ export function AIAssistantModal() {
                     <Sparkles className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 dark:text-white text-base leading-tight">ValuePilot AI Advisor</h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Instant financial calculations & guidance</p>
+                    <h2 className="font-bold text-slate-900 dark:text-white text-base leading-tight">ValuePilot AI Advisor</h2>
+                    <p className="text-xs text-slate-700 dark:text-slate-300">Instant financial calculations & guidance</p>
                   </div>
                 </div>
                 <button

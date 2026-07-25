@@ -19,7 +19,11 @@ export function CurrencySelector() {
 
   return (
     <div className="relative inline-flex items-center">
+      <label htmlFor="global-currency-select" className="sr-only">
+        Select Currency
+      </label>
       <select
+        id="global-currency-select"
         value={currency}
         onChange={(e) => setCurrency(e.target.value as CurrencyCode)}
         className="appearance-none cursor-pointer bg-slate-100/80 dark:bg-slate-800/80 hover:bg-slate-200/80 dark:hover:bg-slate-700/80 text-slate-900 dark:text-slate-100 text-xs font-semibold py-2 pl-3 pr-7 rounded-xl border border-slate-200/60 dark:border-slate-700 transition-all outline-none focus:ring-2 focus:ring-[#6D5DF6]"

@@ -40,10 +40,10 @@ export function CookieBanner() {
               <Cookie className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-1.5">
+              <div className="font-extrabold text-sm text-slate-900 dark:text-white flex items-center gap-1.5" role="heading" aria-level={2}>
                 Privacy & Cookies <ShieldCheck className="w-4 h-4 text-emerald-500" />
-              </h4>
-              <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
+              </div>
+              <p className="text-[11px] text-slate-700 dark:text-slate-300 font-medium">
                 GDPR & CCPA Compliant Notice
               </p>
             </div>

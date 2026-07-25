@@ -142,14 +142,14 @@ export default function HomePage() {
             </motion.div>
 
             {/* Social Proof */}
-            <div className="flex items-center justify-center lg:justify-start gap-3 pt-4 text-xs text-slate-500 font-medium">
+            <div className="flex items-center justify-center lg:justify-start gap-3 pt-4 text-xs text-slate-700 dark:text-slate-300 font-medium">
               <div className="flex -space-x-2">
                 <div className="w-8 h-8 rounded-full bg-[#6D5DF6] text-white font-bold flex items-center justify-center border-2 border-white text-xs">JS</div>
                 <div className="w-8 h-8 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center border-2 border-white text-xs">AK</div>
                 <div className="w-8 h-8 rounded-full bg-amber-500 text-white font-bold flex items-center justify-center border-2 border-white text-xs">MP</div>
               </div>
               <div>
-                <div className="text-amber-500 font-bold">★★★★★ 4.9/5</div>
+                <div className="text-amber-600 font-bold">★★★★★ 4.9/5</div>
                 <span>Trusted by 250K+ smart investors on ValuePilot</span>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function HomePage() {
                 Live 2026 Market Interest Benchmarks
               </span>
             </div>
-            <span className="text-[11px] font-semibold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full">
+            <span className="text-[11px] font-semibold text-emerald-700 bg-emerald-50 dark:bg-emerald-950/60 px-3 py-1 rounded-full">
               Updated Today
             </span>
           </div>
@@ -180,9 +180,9 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-1">
             {marketRates.map((item, idx) => (
               <div key={idx} className="p-4 rounded-2xl bg-[#F8F7FF] dark:bg-slate-800/80 border border-purple-100/60 dark:border-slate-700">
-                <div className="text-[11px] text-slate-400 font-medium">{item.name}</div>
+                <div className="text-[11px] text-slate-700 dark:text-slate-300 font-bold">{item.name}</div>
                 <div className="text-xl font-extrabold text-slate-950 dark:text-white mt-1">{item.rate}</div>
-                <div className="text-[10px] font-bold text-emerald-600 mt-1">{item.trend}</div>
+                <div className="text-[10px] font-bold text-emerald-700 mt-1">{item.trend}</div>
               </div>
             ))}
           </div>
@@ -195,7 +195,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight">
             Comprehensive Suite of Financial Tools
           </h2>
-          <p className="text-slate-600 dark:text-slate-400 text-sm">
+          <p className="text-slate-700 dark:text-slate-300 text-sm">
             Everything you need for mortgage planning, budget worksheets, debt payoff strategies, and retirement growth.
           </p>
         </div>
@@ -208,13 +208,13 @@ export default function HomePage() {
                   <div className={`w-12 h-12 rounded-2xl ${cat.color} flex items-center justify-center font-bold`}>
                     <cat.icon className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-semibold text-slate-400">{cat.count}</span>
+                  <span className="text-xs font-bold text-slate-700 dark:text-slate-300">{cat.count}</span>
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-slate-900 dark:text-white group-hover:text-[#6D5DF6] transition-colors">
                     {cat.title}
                   </h3>
-                  <p className="text-xs text-slate-500 mt-1 flex items-center gap-1 font-medium">
+                  <p className="text-xs text-slate-700 dark:text-slate-300 mt-1 flex items-center gap-1 font-semibold">
                     Explore tools <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </p>
                 </div>
