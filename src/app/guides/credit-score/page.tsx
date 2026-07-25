@@ -26,7 +26,7 @@ export default function CreditScoreGuidePage() {
   const articleSchema = generateArticleSchema(
     "Ultimate Guide to Credit Score & How to Reach 800+",
     "Learn what credit scores are, FICO score ranges (300-850), credit score factors, and 7 actionable steps to improve your credit score fast.",
-    "https://truepathfinance.com/guides/credit-score",
+    "https://valuepilot.vercel.app/guides/credit-score",
     "2026-07-24"
   );
 

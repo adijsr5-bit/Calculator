@@ -32,12 +32,12 @@ export async function generateMetadata({
     description: post.description,
     keywords: [post.category, post.title.toLowerCase(), "financial guide", "ValuePilot blog"],
     alternates: {
-      canonical: `https://valuepilot.app/blog/${post.slug}`,
+      canonical: `https://valuepilot.vercel.app/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://valuepilot.app/blog/${post.slug}`,
+      url: `https://valuepilot.vercel.app/blog/${post.slug}`,
       siteName: "ValuePilot",
       type: "article",
     },
@@ -59,7 +59,7 @@ export default async function BlogPostDetailPage({
   const articleSchema = generateArticleSchema(
     post.title,
     post.description,
-    `https://valuepilot.app/blog/${post.slug}`,
+    `https://valuepilot.vercel.app/blog/${post.slug}`,
     "2026-07-25",
     post.author.name
   );

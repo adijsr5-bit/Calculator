@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "lower monthly mortgage payment",
   ],
   alternates: {
-    canonical: "https://valuepilot.app/refinance-calculator",
+    canonical: "https://valuepilot.vercel.app/refinance-calculator",
   },
   openGraph: {
     title: "Mortgage Refinance Calculator & Break-Even Analysis | ValuePilot",
     description: "Calculate monthly refi savings and break-even timeline instantly.",
-    url: "https://valuepilot.app/refinance-calculator",
+    url: "https://valuepilot.vercel.app/refinance-calculator",
     siteName: "ValuePilot",
     type: "website",
   },
@@ -31,9 +31,9 @@ export default function RefinanceLayout({ children }: { children: React.ReactNod
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.app/refinance-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/refinance-calculator/#webapp",
         "name": "ValuePilot Refinance Calculator",
-        "url": "https://valuepilot.app/refinance-calculator",
+        "url": "https://valuepilot.vercel.app/refinance-calculator",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

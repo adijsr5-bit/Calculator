@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     "household budget breakdown",
   ],
   alternates: {
-    canonical: "https://valuepilot.app/budget-planner",
+    canonical: "https://valuepilot.vercel.app/budget-planner",
   },
   openGraph: {
     title: "Free 50/30/20 Budget Calculator & Monthly Planner | ValuePilot",
     description: "Manage monthly expenses with 50/30/20 rule budgeting and total privacy.",
-    url: "https://valuepilot.app/budget-planner",
+    url: "https://valuepilot.vercel.app/budget-planner",
     siteName: "ValuePilot",
     type: "website",
   },
@@ -32,9 +32,9 @@ export default function BudgetLayout({ children }: { children: React.ReactNode }
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.app/budget-planner/#webapp",
+        "@id": "https://valuepilot.vercel.app/budget-planner/#webapp",
         "name": "ValuePilot 50/30/20 Budget Calculator",
-        "url": "https://valuepilot.app/budget-planner",
+        "url": "https://valuepilot.vercel.app/budget-planner",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

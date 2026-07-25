@@ -102,8 +102,8 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "ValuePilot",
-    url: "https://valuepilot.app",
-    logo: "https://valuepilot.app/logo.png",
+    url: "https://valuepilot.vercel.app",
+    logo: "https://valuepilot.vercel.app/logo.png",
     description: "Free institutional-grade financial calculators, debt payoff tools, and wealth planning guides.",
     sameAs: [
       "https://twitter.com/valuepilotapp",
@@ -164,7 +164,7 @@ export function generateArticleSchema(title: string, description: string, url: s
       name: "ValuePilot",
       logo: {
         "@type": "ImageObject",
-        url: "https://valuepilot.app/logo.png",
+        url: "https://valuepilot.vercel.app/logo.png",
       },
     },
     datePublished: datePublished,

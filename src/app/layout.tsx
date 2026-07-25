@@ -35,11 +35,11 @@ export const metadata: Metadata = {
     "Net Worth Calculator",
   ],
   authors: [{ name: "ValuePilot Team" }],
-  metadataBase: new URL("https://valuepilot.app"),
+  metadataBase: new URL("https://valuepilot.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://valuepilot.app",
+    url: "https://valuepilot.vercel.app",
     title: "Free Financial Calculators & Money Planning Tools | ValuePilot",
     description:
       "Use free financial calculators to plan your mortgage, budget, debt payoff, retirement, taxes, car loans and net worth. Accurate, fast and easy-to-use money tools.",

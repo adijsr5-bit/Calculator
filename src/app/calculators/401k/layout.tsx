@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "max out 401k",
   ],
   alternates: {
-    canonical: "https://valuepilot.app/401k-calculator",
+    canonical: "https://valuepilot.vercel.app/401k-calculator",
   },
   openGraph: {
     title: "Free 401(k) Calculator with Employer Match | ValuePilot",
     description: "Calculate compound 401(k) growth with employer match contributions.",
-    url: "https://valuepilot.app/401k-calculator",
+    url: "https://valuepilot.vercel.app/401k-calculator",
     siteName: "ValuePilot",
     type: "website",
   },
@@ -31,9 +31,9 @@ export default function FourZeroOneKLayout({ children }: { children: React.React
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.app/401k-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/401k-calculator/#webapp",
         "name": "ValuePilot 401(k) Calculator",
-        "url": "https://valuepilot.app/401k-calculator",
+        "url": "https://valuepilot.vercel.app/401k-calculator",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

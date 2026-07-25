@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://valuepilot.app/sitemap.xml",
+    sitemap: "https://valuepilot.vercel.app/sitemap.xml",
   };
 }

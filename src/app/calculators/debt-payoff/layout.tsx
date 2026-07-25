@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "pay off 20k debt",
   ],
   alternates: {
-    canonical: "https://valuepilot.app/debt-payoff-calculator",
+    canonical: "https://valuepilot.vercel.app/debt-payoff-calculator",
   },
   openGraph: {
     title: "Free Debt Payoff Calculator & Planner | ValuePilot",
     description:
       "Eliminate debt faster with Snowball vs Avalanche strategy comparisons, amortization schedules, and custom PDF exports.",
-    url: "https://valuepilot.app/debt-payoff-calculator",
+    url: "https://valuepilot.vercel.app/debt-payoff-calculator",
     siteName: "ValuePilot",
     type: "website",
   },
@@ -41,9 +41,9 @@ export default function DebtPayoffLayout({ children }: { children: React.ReactNo
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.app/debt-payoff-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/debt-payoff-calculator/#webapp",
         "name": "ValuePilot Debt Payoff Planner",
-        "url": "https://valuepilot.app/debt-payoff-calculator",
+        "url": "https://valuepilot.vercel.app/debt-payoff-calculator",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript",
@@ -62,19 +62,19 @@ export default function DebtPayoffLayout({ children }: { children: React.ReactNo
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://valuepilot.app",
+            "item": "https://valuepilot.vercel.app",
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Calculators",
-            "item": "https://valuepilot.app/#calculators",
+            "item": "https://valuepilot.vercel.app/#calculators",
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Debt Payoff Calculator",
-            "item": "https://valuepilot.app/debt-payoff-calculator",
+            "item": "https://valuepilot.vercel.app/debt-payoff-calculator",
           },
         ],
       },

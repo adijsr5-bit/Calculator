@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/lib/blogData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://valuepilot.app";
+  const baseUrl = "https://valuepilot.vercel.app";
 
   const highCpcShortUrls = [
     { route: "/mortgage-calculator", priority: 1.0 },

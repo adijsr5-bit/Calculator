@@ -15,12 +15,12 @@ export const metadata: Metadata = {
     "auto loan amortization schedule",
   ],
   alternates: {
-    canonical: "https://valuepilot.app/car-loan-calculator",
+    canonical: "https://valuepilot.vercel.app/car-loan-calculator",
   },
   openGraph: {
     title: "Free Car Loan Calculator & Auto Payment Estimator | ValuePilot",
     description: "Calculate auto payments and compare 36 to 72 month auto loan terms.",
-    url: "https://valuepilot.app/car-loan-calculator",
+    url: "https://valuepilot.vercel.app/car-loan-calculator",
     siteName: "ValuePilot",
     type: "website",
   },
@@ -32,9 +32,9 @@ export default function CarLoanLayout({ children }: { children: React.ReactNode 
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.app/car-loan-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/car-loan-calculator/#webapp",
         "name": "ValuePilot Car Loan Calculator",
-        "url": "https://valuepilot.app/car-loan-calculator",
+        "url": "https://valuepilot.vercel.app/car-loan-calculator",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

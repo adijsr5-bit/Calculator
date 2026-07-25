@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "roth vs traditional ira",
   ],
   alternates: {
-    canonical: "https://valuepilot.app/ira-calculator",
+    canonical: "https://valuepilot.vercel.app/ira-calculator",
   },
   openGraph: {
     title: "Roth IRA & Traditional IRA Growth Calculator | ValuePilot",
     description: "Compare tax-free Roth IRA growth vs Traditional IRA tax deductions.",
-    url: "https://valuepilot.app/ira-calculator",
+    url: "https://valuepilot.vercel.app/ira-calculator",
     siteName: "ValuePilot",
     type: "website",
   },
@@ -31,9 +31,9 @@ export default function IRALayout({ children }: { children: React.ReactNode }) {
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.app/ira-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/ira-calculator/#webapp",
         "name": "ValuePilot IRA Calculator",
-        "url": "https://valuepilot.app/ira-calculator",
+        "url": "https://valuepilot.vercel.app/ira-calculator",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
