@@ -191,6 +191,7 @@ export function CalculatorWrapper({
           <button
             onClick={handleDownloadPDF}
             disabled={isExportingPdf}
+            aria-label="Export PDF calculation statement"
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-[#6D5DF6] transition-all shadow-sm"
           >
             <Download className="w-3.5 h-3.5 text-[#6D5DF6]" />
@@ -199,6 +200,7 @@ export function CalculatorWrapper({
 
           <button
             onClick={handlePrint}
+            aria-label="Print calculation results"
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-[#6D5DF6] transition-all shadow-sm"
           >
             <Printer className="w-3.5 h-3.5 text-slate-600 dark:text-slate-400" />
@@ -207,6 +209,7 @@ export function CalculatorWrapper({
 
           <button
             onClick={handleShare}
+            aria-label="Share tool link"
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-[#6D5DF6] transition-all shadow-sm"
           >
             {copied ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <Share2 className="w-3.5 h-3.5 text-slate-600 dark:text-slate-400" />}
@@ -215,6 +218,7 @@ export function CalculatorWrapper({
 
           <button
             onClick={handleSaveLocal}
+            aria-label="Save calculation to local history"
             className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-[#6D5DF6] transition-all shadow-sm"
           >
             {saved ? <Check className="w-3.5 h-3.5 text-emerald-500" /> : <FileText className="w-3.5 h-3.5 text-slate-600 dark:text-slate-400" />}
@@ -223,6 +227,7 @@ export function CalculatorWrapper({
 
           <button
             onClick={handleToggleFav}
+            aria-label="Bookmark this calculator"
             className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl border transition-all shadow-sm ${
               isFav
                 ? "bg-indigo-50 dark:bg-indigo-950/60 border-indigo-300 text-[#6D5DF6]"

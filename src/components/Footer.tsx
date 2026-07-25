@@ -37,6 +37,7 @@ export function Footer() {
               <input
                 type="email"
                 required
+                aria-label="Email address for financial newsletter"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email address..."
@@ -44,6 +45,7 @@ export function Footer() {
               />
               <button
                 type="submit"
+                aria-label="Subscribe to newsletter"
                 className="px-6 py-3 rounded-full bg-[#6D5DF6] hover:bg-[#583ef0] text-white text-xs font-bold transition-colors shrink-0"
               >
                 Subscribe
@@ -55,10 +57,13 @@ export function Footer() {
         {/* Footer Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-8 border-b border-slate-800">
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2 group">
+            <Link href="/" aria-label="ValuePilot Home" className="flex items-center gap-2 group">
               <img
                 src="/logo.png"
-                alt="ValuePilot"
+                alt="ValuePilot - Plan Better. Calculate Smarter."
+                width={150}
+                height={38}
+                decoding="async"
                 className="h-9 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform"
               />
             </Link>

@@ -57,16 +57,19 @@ export function Navbar() {
     <header className="fixed top-2 sm:top-4 left-0 right-0 z-50 px-2.5 sm:px-6 lg:px-8 w-full max-w-full">
       <div className="max-w-6xl mx-auto rounded-2xl sm:rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-purple-100/90 dark:border-slate-800 shadow-lg shadow-purple-500/5 px-4 sm:px-6 py-2.5 flex items-center justify-between transition-all w-full">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
+        <Link href="/" aria-label="ValuePilot Home" className="flex items-center gap-2 group">
           <img
             src="/logo.png"
             alt="ValuePilot - Plan Better. Calculate Smarter."
+            width={140}
+            height={36}
+            decoding="async"
             className="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform"
           />
         </Link>
 
         {/* Desktop Nav Items */}
-        <nav className="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-700 dark:text-slate-200">
+        <nav aria-label="Main Navigation" className="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-700 dark:text-slate-200">
           <Link href="/" className="hover:text-[#6D5DF6] transition-colors py-2">
             Home
           </Link>
@@ -79,6 +82,8 @@ export function Navbar() {
             onMouseLeave={handleMouseLeave}
           >
             <button
+              aria-label="Open financial calculators menu"
+              aria-expanded={toolsDropdownOpen}
               className="flex items-center gap-1.5 hover:text-[#6D5DF6] transition-colors py-2 font-bold"
               onClick={() => setToolsDropdownOpen((prev) => !prev)}
             >
@@ -144,6 +149,8 @@ export function Navbar() {
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
           <button
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-2 rounded-xl text-slate-700 dark:text-slate-200"
           >

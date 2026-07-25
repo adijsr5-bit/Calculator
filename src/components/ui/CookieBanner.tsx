@@ -69,12 +69,14 @@ export function CookieBanner() {
         <div className="flex items-center gap-2.5 pt-1">
           <button
             onClick={handleAcceptAll}
+            aria-label="Accept all cookies and preferences"
             className="flex-1 py-2.5 px-4 rounded-xl bg-[#6D5DF6] hover:bg-[#5b4be0] text-white text-xs font-bold shadow-md hover:shadow-purple transition-all flex items-center justify-center gap-1.5"
           >
             <Check className="w-3.5 h-3.5" /> Accept All
           </button>
           <button
             onClick={handleEssentialOnly}
+            aria-label="Accept essential cookies only"
             className="py-2.5 px-3.5 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 text-xs font-bold transition-all"
           >
             Essential Only

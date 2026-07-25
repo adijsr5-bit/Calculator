@@ -75,6 +75,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="google-site-verification" content="ZbuthJm7kqi-5-WV6Z8Dvlvo_udMkHgFFfSTDfuS2uA" />
         <meta name="google-adsense-account" content="ca-pub-9657690036702429" />
         <Script
