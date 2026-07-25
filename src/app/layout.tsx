@@ -94,9 +94,30 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-9657690036702429" />
         <meta name="agentic-browsing-enabled" content="true" />
         <meta name="webmcp-compliant" content="true" />
+        <Script
+          id="gtm-script"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K9V6GJ4X');`,
+          }}
+        />
         <AdSenseScript clientId={adsenseClientId} />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-[#6D5DF6] selection:text-white max-w-full overflow-x-hidden relative">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-K9V6GJ4X"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#6D5DF6] focus:text-white focus:rounded-xl text-xs font-bold"
