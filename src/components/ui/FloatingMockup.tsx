@@ -126,6 +126,7 @@ export function FloatingMockup() {
                 </div>
                 <input
                   type="range"
+                  aria-label="Home Purchase Price Slider"
                   min="150000"
                   max="1000000"
                   step="25000"
@@ -142,6 +143,7 @@ export function FloatingMockup() {
                 </div>
                 <input
                   type="range"
+                  aria-label="Down Payment Percentage Slider"
                   min="5"
                   max="30"
                   step="5"
@@ -191,6 +193,7 @@ export function FloatingMockup() {
                 </div>
                 <input
                   type="range"
+                  aria-label="Total Debt Balance Slider"
                   min="5000"
                   max="75000"
                   step="2500"
@@ -207,6 +210,7 @@ export function FloatingMockup() {
                 </div>
                 <input
                   type="range"
+                  aria-label="Extra Payoff Budget Slider"
                   min="50"
                   max="1000"
                   step="50"
@@ -256,6 +260,7 @@ export function FloatingMockup() {
                 </div>
                 <input
                   type="range"
+                  aria-label="Monthly Contribution Slider"
                   min="100"
                   max="3000"
                   step="100"
@@ -272,6 +277,7 @@ export function FloatingMockup() {
                 </div>
                 <input
                   type="range"
+                  aria-label="Growth Duration Years Slider"
                   min="2"
                   max="25"
                   step="1"

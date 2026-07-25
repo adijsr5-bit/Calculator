@@ -17,7 +17,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-800 relative overflow-hidden">
+    <div className="bg-slate-950 text-slate-300 pt-16 pb-12 border-t border-slate-800 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#6D5DF6]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
@@ -117,6 +117,6 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }

@@ -110,15 +110,15 @@ export default function RootLayout({
         </a>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <CurrencyProvider>
-            <div role="banner">
+            <header role="banner">
               <Navbar />
-            </div>
+            </header>
             <main id="main-content" tabIndex={-1} role="main" className="flex-1 w-full max-w-full overflow-x-hidden outline-none">
               {children}
             </main>
-            <div role="contentinfo">
+            <footer role="contentinfo">
               <Footer />
-            </div>
+            </footer>
             <AIAssistantModal />
             <CookieBanner />
           </CurrencyProvider>

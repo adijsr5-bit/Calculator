@@ -54,7 +54,7 @@ export function Navbar() {
   ];
 
   return (
-    <header className="fixed top-2 sm:top-4 left-0 right-0 z-50 px-2.5 sm:px-6 lg:px-8 w-full max-w-full">
+    <div className="fixed top-2 sm:top-4 left-0 right-0 z-50 px-2.5 sm:px-6 lg:px-8 w-full max-w-full">
       <div className="max-w-6xl mx-auto rounded-2xl sm:rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-purple-100/90 dark:border-slate-800 shadow-lg shadow-purple-500/5 px-4 sm:px-6 py-2.5 flex items-center justify-between transition-all w-full">
         {/* Brand Logo */}
         <Link href="/" aria-label="ValuePilot Home" className="flex items-center gap-2 group">
@@ -250,6 +250,6 @@ export function Navbar() {
           </div>
         </nav>
       )}
-    </header>
+    </div>
   );
 }

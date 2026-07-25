@@ -87,43 +87,23 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Hero Text */}
           <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-950/60 border border-purple-200/60 dark:border-purple-800/60 text-[#6D5DF6] text-xs font-bold"
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 dark:bg-purple-950/60 border border-purple-200/60 dark:border-purple-800/60 text-[#6D5DF6] text-xs font-bold animate-in fade-in duration-300">
               <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
               <span>ValuePilot Financial Tools & Money Planning</span>
-            </motion.div>
+            </div>
 
             {/* HOMEPAGE H1 */}
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-6xl font-extrabold text-slate-950 dark:text-white tracking-tight leading-[1.1]"
-            >
+            <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-950 dark:text-white tracking-tight leading-[1.1] animate-in fade-in slide-in-from-bottom-2 duration-500">
               Free Financial Calculators <br />
               <span className="text-[#6D5DF6]">& Personal Finance Tools</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-slate-600 dark:text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium"
-            >
+            <p className="text-slate-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 font-medium animate-in fade-in slide-in-from-bottom-3 duration-500">
               Use ValuePilot&apos;s free money tools to plan your mortgage, monthly budget, debt payoff, retirement, tax refund, car loan, and net worth with 100% private client-side calculations.
-            </motion.p>
+            </p>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2"
-            >
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 animate-in fade-in slide-in-from-bottom-4 duration-500">
               <Link
                 href="/calculators/mortgage"
                 className="px-7 py-4 rounded-full bg-[#6D5DF6] hover:bg-[#583ef0] text-white font-bold text-base shadow-purple transition-all hover:scale-105 active:scale-95 flex items-center gap-2 group"
@@ -139,7 +119,7 @@ export default function HomePage() {
               >
                 Debt Payoff Planner
               </Link>
-            </motion.div>
+            </div>
 
             {/* Social Proof */}
             <div className="flex items-center justify-center lg:justify-start gap-3 pt-4 text-xs text-slate-700 dark:text-slate-300 font-medium">
