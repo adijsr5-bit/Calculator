@@ -33,7 +33,7 @@ export function Footer() {
               <CheckCircle2 className="w-4 h-4" /> Thank you for subscribing!
             </div>
           ) : (
-            <form onSubmit={handleSubscribe} className="flex gap-2 w-full md:w-auto max-w-md">
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 w-full md:w-auto max-w-md">
               <input
                 type="email"
                 required

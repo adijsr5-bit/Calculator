@@ -167,7 +167,7 @@ export function CalculatorWrapper({
   const faqSchema = generateFAQSchema(faqs);
 
   return (
-    <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+    <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12 w-full max-w-full overflow-x-hidden">
       {/* JSON-LD Schema Injection */}
       <script
         type="application/ld+json"

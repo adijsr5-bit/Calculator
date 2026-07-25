@@ -59,11 +59,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-[#6D5DF6] selection:text-white">
+      <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-[#6D5DF6] selection:text-white max-w-full overflow-x-hidden relative">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <CurrencyProvider>
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 w-full max-w-full overflow-x-hidden">{children}</main>
             <Footer />
             <AIAssistantModal />
             <CookieBanner />
