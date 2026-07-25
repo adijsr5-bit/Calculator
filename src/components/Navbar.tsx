@@ -57,13 +57,12 @@ export function Navbar() {
     <header className="fixed top-2 sm:top-4 left-0 right-0 z-50 px-2.5 sm:px-6 lg:px-8 w-full max-w-full">
       <div className="max-w-6xl mx-auto rounded-2xl sm:rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border border-purple-100/90 dark:border-slate-800 shadow-lg shadow-purple-500/5 px-4 sm:px-6 py-2.5 flex items-center justify-between transition-all w-full">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-xl bg-[#6D5DF6] flex items-center justify-center text-white shadow-purple group-hover:scale-105 transition-transform">
-            <TrendingUp className="w-5 h-5 stroke-[2.5]" />
-          </div>
-          <span className="font-bold text-lg text-slate-950 dark:text-white tracking-tight">
-            ValuePilot<span className="text-[#6D5DF6]">.</span>
-          </span>
+        <Link href="/" className="flex items-center gap-2 group">
+          <img
+            src="/logo.png"
+            alt="ValuePilot - Plan Better. Calculate Smarter."
+            className="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform"
+          />
         </Link>
 
         {/* Desktop Nav Items */}

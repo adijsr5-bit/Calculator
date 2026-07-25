@@ -55,13 +55,12 @@ export function Footer() {
         {/* Footer Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-8 border-b border-slate-800">
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-xl bg-[#6D5DF6] flex items-center justify-center text-white font-bold">
-                <TrendingUp className="w-5 h-5 stroke-[2.5]" />
-              </div>
-              <span className="font-bold text-xl text-white tracking-tight">
-                ValuePilot<span className="text-[#6D5DF6]">.</span>
-              </span>
+            <Link href="/" className="flex items-center gap-2 group">
+              <img
+                src="/logo.png"
+                alt="ValuePilot"
+                className="h-9 w-auto object-contain brightness-110 group-hover:scale-105 transition-transform"
+              />
             </Link>
 
             <p className="text-slate-400 text-xs leading-relaxed max-w-sm">
