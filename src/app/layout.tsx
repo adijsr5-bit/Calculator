@@ -50,6 +50,9 @@ export const metadata: Metadata = {
     title: "ValuePilot | Free Financial Calculators & Money Planning Tools",
     description: "Use free financial calculators to plan your mortgage, budget, debt payoff, retirement, taxes, car loans and net worth.",
   },
+  other: {
+    "google-adsense-account": "ca-pub-9657690036702429",
+  },
 };
 
 import Script from "next/script";
@@ -59,19 +62,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+  const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-9657690036702429";
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {adsenseClientId && (
-          <Script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-            crossOrigin="anonymous"
-            strategy="afterInteractive"
-          />
-        )}
+        <meta name="google-adsense-account" content="ca-pub-9657690036702429" />
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-[#6D5DF6] selection:text-white max-w-full overflow-x-hidden relative">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
