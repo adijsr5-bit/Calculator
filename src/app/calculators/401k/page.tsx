@@ -101,18 +101,22 @@ export default function Four01kCalculatorPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Annual Salary ($)</label>
+                <label htmlFor="currentSalary" className="text-[11px] text-slate-500 font-semibold">Annual Salary ($)</label>
                 <input
+                  id="currentSalary"
                   type="number"
+                  aria-label="Annual Salary Amount"
                   value={input.currentSalary}
                   onChange={(e) => setInput({ ...input, currentSalary: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Employee Contribution (%)</label>
+                <label htmlFor="employeeContributionPercent" className="text-[11px] text-slate-500 font-semibold">Employee Contribution (%)</label>
                 <input
+                  id="employeeContributionPercent"
                   type="number"
+                  aria-label="Employee Contribution Percentage"
                   value={input.employeeContributionPercent}
                   onChange={(e) => setInput({ ...input, employeeContributionPercent: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold text-[#6D5DF6]"
@@ -122,18 +126,22 @@ export default function Four01kCalculatorPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Employer Match % (e.g. 50%)</label>
+                <label htmlFor="employerMatchPercent" className="text-[11px] text-slate-500 font-semibold">Employer Match % (e.g. 50%)</label>
                 <input
+                  id="employerMatchPercent"
                   type="number"
+                  aria-label="Employer Match Percentage"
                   value={input.employerMatchPercent}
                   onChange={(e) => setInput({ ...input, employerMatchPercent: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold text-emerald-600"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Match Cap Limit % (e.g. 6%)</label>
+                <label htmlFor="employerMatchLimitPercent" className="text-[11px] text-slate-500 font-semibold">Match Cap Limit % (e.g. 6%)</label>
                 <input
+                  id="employerMatchLimitPercent"
                   type="number"
+                  aria-label="Employer Match Cap Limit Percentage"
                   value={input.employerMatchLimitPercent}
                   onChange={(e) => setInput({ ...input, employerMatchLimitPercent: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"

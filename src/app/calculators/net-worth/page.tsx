@@ -112,36 +112,44 @@ export default function NetWorthCalculatorPage() {
 
               <div className="grid grid-cols-2 gap-3 text-xs font-semibold">
                 <div>
-                  <label className="text-slate-500">Cash & Checking ($)</label>
+                  <label htmlFor="cashSavings" className="text-slate-500">Cash & Checking ($)</label>
                   <input
+                    id="cashSavings"
                     type="number"
+                    aria-label="Cash and Checking Savings"
                     value={input.cashSavings}
                     onChange={(e) => setInput({ ...input, cashSavings: Number(e.target.value) || 0 })}
                     className="w-full mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border"
                   />
                 </div>
                 <div>
-                  <label className="text-slate-500">Stocks & Brokerage ($)</label>
+                  <label htmlFor="stocksInvestments" className="text-slate-500">Stocks & Brokerage ($)</label>
                   <input
+                    id="stocksInvestments"
                     type="number"
+                    aria-label="Stocks and Investment Brokerage"
                     value={input.stocksInvestments}
                     onChange={(e) => setInput({ ...input, stocksInvestments: Number(e.target.value) || 0 })}
                     className="w-full mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border"
                   />
                 </div>
                 <div>
-                  <label className="text-slate-500">Real Estate Market Val ($)</label>
+                  <label htmlFor="realEstateVal" className="text-slate-500">Real Estate Market Val ($)</label>
                   <input
+                    id="realEstateVal"
                     type="number"
+                    aria-label="Real Estate Market Valuation"
                     value={input.realEstateVal}
                     onChange={(e) => setInput({ ...input, realEstateVal: Number(e.target.value) || 0 })}
                     className="w-full mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border"
                   />
                 </div>
                 <div>
-                  <label className="text-slate-500">Vehicles Valuation ($)</label>
+                  <label htmlFor="vehiclesVal" className="text-slate-500">Vehicles Valuation ($)</label>
                   <input
+                    id="vehiclesVal"
                     type="number"
+                    aria-label="Vehicles Valuation"
                     value={input.vehiclesVal}
                     onChange={(e) => setInput({ ...input, vehiclesVal: Number(e.target.value) || 0 })}
                     className="w-full mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border"
@@ -157,36 +165,44 @@ export default function NetWorthCalculatorPage() {
 
               <div className="grid grid-cols-2 gap-3 text-xs font-semibold">
                 <div>
-                  <label className="text-slate-500">Mortgage Balance ($)</label>
+                  <label htmlFor="mortgageDebt" className="text-slate-500">Mortgage Balance ($)</label>
                   <input
+                    id="mortgageDebt"
                     type="number"
+                    aria-label="Mortgage Balance Liability"
                     value={input.mortgageDebt}
                     onChange={(e) => setInput({ ...input, mortgageDebt: Number(e.target.value) || 0 })}
                     className="w-full mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border"
                   />
                 </div>
                 <div>
-                  <label className="text-slate-500">Credit Card Debt ($)</label>
+                  <label htmlFor="creditCardDebt" className="text-slate-500">Credit Card Debt ($)</label>
                   <input
+                    id="creditCardDebt"
                     type="number"
+                    aria-label="Credit Card Debt Liability"
                     value={input.creditCardDebt}
                     onChange={(e) => setInput({ ...input, creditCardDebt: Number(e.target.value) || 0 })}
                     className="w-full mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border"
                   />
                 </div>
                 <div>
-                  <label className="text-slate-500">Student Loans ($)</label>
+                  <label htmlFor="studentLoans" className="text-slate-500">Student Loans ($)</label>
                   <input
+                    id="studentLoans"
                     type="number"
+                    aria-label="Student Loans Liability"
                     value={input.studentLoans}
                     onChange={(e) => setInput({ ...input, studentLoans: Number(e.target.value) || 0 })}
                     className="w-full mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border"
                   />
                 </div>
                 <div>
-                  <label className="text-slate-500">Auto Loans ($)</label>
+                  <label htmlFor="autoLoans" className="text-slate-500">Auto Loans ($)</label>
                   <input
+                    id="autoLoans"
                     type="number"
+                    aria-label="Auto Loans Liability"
                     value={input.autoLoans}
                     onChange={(e) => setInput({ ...input, autoLoans: Number(e.target.value) || 0 })}
                     className="w-full mt-1 p-2 rounded-lg bg-slate-50 dark:bg-slate-800 border"

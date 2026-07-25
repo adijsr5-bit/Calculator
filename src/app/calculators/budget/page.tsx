@@ -114,9 +114,11 @@ export default function BudgetPlannerPage() {
             </h2>
 
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Monthly Net Income ($)</label>
+              <label htmlFor="monthlyIncome" className="text-xs font-semibold text-slate-700 dark:text-slate-300">Monthly Net Income ($)</label>
               <input
+                id="monthlyIncome"
                 type="number"
+                aria-label="Monthly Net Income"
                 value={input.monthlyIncome}
                 onChange={(e) => setInput({ ...input, monthlyIncome: Number(e.target.value) || 0 })}
                 className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-900 dark:text-white text-sm"
@@ -125,36 +127,44 @@ export default function BudgetPlannerPage() {
 
             <div className="grid grid-cols-2 gap-3 pt-2">
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Rent / Housing ($)</label>
+                <label htmlFor="housing" className="text-[11px] text-slate-500 font-semibold">Rent / Housing ($)</label>
                 <input
+                  id="housing"
                   type="number"
+                  aria-label="Rent or Housing Expenses"
                   value={input.housing}
                   onChange={(e) => setInput({ ...input, housing: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-semibold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Food & Groceries ($)</label>
+                <label htmlFor="food" className="text-[11px] text-slate-500 font-semibold">Food & Groceries ($)</label>
                 <input
+                  id="food"
                   type="number"
+                  aria-label="Food and Groceries Expenses"
                   value={input.food}
                   onChange={(e) => setInput({ ...input, food: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-semibold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Transportation ($)</label>
+                <label htmlFor="transport" className="text-[11px] text-slate-500 font-semibold">Transportation ($)</label>
                 <input
+                  id="transport"
                   type="number"
+                  aria-label="Transportation Expenses"
                   value={input.transport}
                   onChange={(e) => setInput({ ...input, transport: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-semibold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Monthly Savings ($)</label>
+                <label htmlFor="savingsInvestment" className="text-[11px] text-slate-500 font-semibold">Monthly Savings ($)</label>
                 <input
+                  id="savingsInvestment"
                   type="number"
+                  aria-label="Monthly Savings and Investment"
                   value={input.savingsInvestment}
                   onChange={(e) => setInput({ ...input, savingsInvestment: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-semibold text-emerald-600"

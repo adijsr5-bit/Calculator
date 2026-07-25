@@ -107,9 +107,11 @@ export default function RefinanceCalculatorPage() {
             </h2>
 
             <div className="space-y-2">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Remaining Mortgage Balance ($)</label>
+              <label htmlFor="currentBalance" className="text-xs font-semibold text-slate-700 dark:text-slate-300">Remaining Mortgage Balance ($)</label>
               <input
+                id="currentBalance"
                 type="number"
+                aria-label="Remaining Mortgage Balance"
                 value={input.currentBalance}
                 onChange={(e) => setInput({ ...input, currentBalance: Number(e.target.value) || 0 })}
                 className="w-full px-4 py-3 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-900 dark:text-white"
@@ -119,19 +121,23 @@ export default function RefinanceCalculatorPage() {
             {/* Current Rate & Years */}
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Current Rate (%)</label>
+                <label htmlFor="currentInterestRate" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Current Rate (%)</label>
                 <input
+                  id="currentInterestRate"
                   type="number"
                   step="0.1"
+                  aria-label="Current Interest Rate Percentage"
                   value={input.currentInterestRate}
                   onChange={(e) => setInput({ ...input, currentInterestRate: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-900 dark:text-white text-sm"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Remaining Yrs</label>
+                <label htmlFor="currentRemainingYears" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Remaining Yrs</label>
                 <input
+                  id="currentRemainingYears"
                   type="number"
+                  aria-label="Remaining Loan Years"
                   value={input.currentRemainingYears}
                   onChange={(e) => setInput({ ...input, currentRemainingYears: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-900 dark:text-white text-sm"
@@ -142,18 +148,22 @@ export default function RefinanceCalculatorPage() {
             {/* New Rate & Term */}
             <div className="grid grid-cols-2 gap-4 pt-2 border-t border-slate-100 dark:border-slate-800">
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-[#6D5DF6]">New Rate (%)</label>
+                <label htmlFor="newInterestRate" className="text-xs font-bold text-[#6D5DF6]">New Rate (%)</label>
                 <input
+                  id="newInterestRate"
                   type="number"
                   step="0.1"
+                  aria-label="New Refinance Interest Rate"
                   value={input.newInterestRate}
                   onChange={(e) => setInput({ ...input, newInterestRate: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-indigo-200 dark:border-indigo-800 font-bold text-slate-900 dark:text-white text-sm"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-[#6D5DF6]">New Term (Years)</label>
+                <label htmlFor="newLoanTermYears" className="text-xs font-bold text-[#6D5DF6]">New Term (Years)</label>
                 <select
+                  id="newLoanTermYears"
+                  aria-label="New Loan Term Years"
                   value={input.newLoanTermYears}
                   onChange={(e) => setInput({ ...input, newLoanTermYears: Number(e.target.value) })}
                   className="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-indigo-200 dark:border-indigo-800 font-bold text-slate-900 dark:text-white text-sm"
@@ -168,9 +178,11 @@ export default function RefinanceCalculatorPage() {
 
             {/* Closing Costs & Checkbox */}
             <div className="space-y-2 pt-2">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Est. Refinance Closing Costs ($)</label>
+              <label htmlFor="refinanceClosingCosts" className="text-xs font-semibold text-slate-700 dark:text-slate-300">Est. Refinance Closing Costs ($)</label>
               <input
+                id="refinanceClosingCosts"
                 type="number"
+                aria-label="Estimated Refinance Closing Costs"
                 value={input.refinanceClosingCosts}
                 onChange={(e) => setInput({ ...input, refinanceClosingCosts: Number(e.target.value) || 0 })}
                 className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-bold text-slate-900 dark:text-white"

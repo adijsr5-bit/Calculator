@@ -98,9 +98,11 @@ export default function IraCalculatorPage() {
             </h2>
 
             <div className="space-y-1">
-              <label className="text-[11px] text-slate-500 font-semibold">Annual Contribution ($)</label>
+              <label htmlFor="annualContribution" className="text-[11px] text-slate-500 font-semibold">Annual Contribution ($)</label>
               <input
+                id="annualContribution"
                 type="number"
+                aria-label="Annual IRA Contribution Amount"
                 value={input.annualContribution}
                 onChange={(e) => setInput({ ...input, annualContribution: Number(e.target.value) || 0 })}
                 className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"
@@ -109,18 +111,22 @@ export default function IraCalculatorPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Current Tax Rate (%)</label>
+                <label htmlFor="currentMarginalTaxRate" className="text-[11px] text-slate-500 font-semibold">Current Tax Rate (%)</label>
                 <input
+                  id="currentMarginalTaxRate"
                   type="number"
+                  aria-label="Current Marginal Tax Rate Percentage"
                   value={input.currentMarginalTaxRate}
                   onChange={(e) => setInput({ ...input, currentMarginalTaxRate: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Retirement Tax Rate (%)</label>
+                <label htmlFor="expectedRetirementTaxRate" className="text-[11px] text-slate-500 font-semibold">Retirement Tax Rate (%)</label>
                 <input
+                  id="expectedRetirementTaxRate"
                   type="number"
+                  aria-label="Expected Retirement Tax Rate Percentage"
                   value={input.expectedRetirementTaxRate}
                   onChange={(e) => setInput({ ...input, expectedRetirementTaxRate: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"

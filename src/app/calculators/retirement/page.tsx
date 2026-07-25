@@ -102,18 +102,22 @@ export default function RetirementCalculatorPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Current Age</label>
+                <label htmlFor="currentAge" className="text-[11px] text-slate-500 font-semibold">Current Age</label>
                 <input
+                  id="currentAge"
                   type="number"
+                  aria-label="Current Age"
                   value={input.currentAge}
                   onChange={(e) => setInput({ ...input, currentAge: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Retirement Target Age</label>
+                <label htmlFor="retirementAge" className="text-[11px] text-slate-500 font-semibold">Retirement Target Age</label>
                 <input
+                  id="retirementAge"
                   type="number"
+                  aria-label="Retirement Target Age"
                   value={input.retirementAge}
                   onChange={(e) => setInput({ ...input, retirementAge: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"
@@ -123,18 +127,22 @@ export default function RetirementCalculatorPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Current Savings Balance ($)</label>
+                <label htmlFor="currentSavings" className="text-[11px] text-slate-500 font-semibold">Current Savings Balance ($)</label>
                 <input
+                  id="currentSavings"
                   type="number"
+                  aria-label="Current Savings Balance"
                   value={input.currentSavings}
                   onChange={(e) => setInput({ ...input, currentSavings: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Monthly Investment ($)</label>
+                <label htmlFor="monthlyInvestment" className="text-[11px] text-slate-500 font-semibold">Monthly Investment ($)</label>
                 <input
+                  id="monthlyInvestment"
                   type="number"
+                  aria-label="Monthly Investment Amount"
                   value={input.monthlyInvestment}
                   onChange={(e) => setInput({ ...input, monthlyInvestment: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold text-[#6D5DF6]"
@@ -144,20 +152,24 @@ export default function RetirementCalculatorPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Expected Return (%)</label>
+                <label htmlFor="expectedAnnualReturn" className="text-[11px] text-slate-500 font-semibold">Expected Return (%)</label>
                 <input
+                  id="expectedAnnualReturn"
                   type="number"
                   step="0.1"
+                  aria-label="Expected Annual Return Percentage"
                   value={input.expectedAnnualReturn}
                   onChange={(e) => setInput({ ...input, expectedAnnualReturn: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Expected Inflation (%)</label>
+                <label htmlFor="expectedInflation" className="text-[11px] text-slate-500 font-semibold">Expected Inflation (%)</label>
                 <input
+                  id="expectedInflation"
                   type="number"
                   step="0.1"
+                  aria-label="Expected Inflation Rate Percentage"
                   value={input.expectedInflation}
                   onChange={(e) => setInput({ ...input, expectedInflation: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold text-slate-400"

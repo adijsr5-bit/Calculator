@@ -160,12 +160,13 @@ export default function MortgageCalculatorPage() {
             {/* Input 2: Down Payment */}
             <div className="space-y-2">
               <div className="flex justify-between text-sm font-semibold text-slate-700 dark:text-slate-300">
-                <label htmlFor="downPayment">Down Payment ({input.downPaymentPercent}%)</label>
+                <label htmlFor="downPaymentPercent">Down Payment ({input.downPaymentPercent}%)</label>
                 <span className="text-slate-500 font-normal">{formatCurrency(result.downPaymentAmount, currency)}</span>
               </div>
               <div className="flex items-center gap-3">
                 <input
                   type="range"
+                  aria-label="Down Payment Percentage Slider"
                   min="0"
                   max="50"
                   step="1"
@@ -174,7 +175,9 @@ export default function MortgageCalculatorPage() {
                   className="flex-1 accent-[#6D5DF6] cursor-pointer"
                 />
                 <input
+                  id="downPaymentPercent"
                   type="number"
+                  aria-label="Down Payment Percentage"
                   min="0"
                   max="50"
                   value={input.downPaymentPercent}
@@ -208,6 +211,7 @@ export default function MortgageCalculatorPage() {
                 </label>
                 <select
                   id="loanTerm"
+                  aria-label="Select Mortgage Loan Term"
                   value={input.loanTermYears}
                   onChange={(e) => setInput({ ...input, loanTermYears: Number(e.target.value) })}
                   className="w-full px-4 py-3 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-[#6D5DF6] outline-none"
@@ -223,27 +227,33 @@ export default function MortgageCalculatorPage() {
             {/* Input 5 & 6: Property Tax & Insurance */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Annual Tax ($)</label>
+                <label htmlFor="propertyTaxAnnual" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Annual Tax ($)</label>
                 <input
+                  id="propertyTaxAnnual"
                   type="number"
+                  aria-label="Annual Property Tax"
                   value={input.propertyTaxAnnual}
                   onChange={(e) => setInput({ ...input, propertyTaxAnnual: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-white"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Annual Ins. ($)</label>
+                <label htmlFor="homeInsuranceAnnual" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Annual Ins. ($)</label>
                 <input
+                  id="homeInsuranceAnnual"
                   type="number"
+                  aria-label="Annual Home Insurance"
                   value={input.homeInsuranceAnnual}
                   onChange={(e) => setInput({ ...input, homeInsuranceAnnual: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-white"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">HOA Monthly ($)</label>
+                <label htmlFor="hoaMonthly" className="text-xs font-semibold text-slate-600 dark:text-slate-400">HOA Monthly ($)</label>
                 <input
+                  id="hoaMonthly"
                   type="number"
+                  aria-label="Monthly HOA Fees"
                   value={input.hoaMonthly}
                   onChange={(e) => setInput({ ...input, hoaMonthly: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-sm font-semibold text-slate-900 dark:text-white"

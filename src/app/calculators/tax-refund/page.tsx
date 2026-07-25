@@ -100,9 +100,11 @@ export default function TaxRefundEstimatorPage() {
               <Receipt className="w-5 h-5 text-[#6D5DF6]" /> Tax Details
             </h2>
 
-            <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Filing Status</label>
+            <div className="space-y-1">
+              <label htmlFor="filingStatus" className="text-xs font-semibold text-slate-700 dark:text-slate-300">Filing Status</label>
               <select
+                id="filingStatus"
+                aria-label="Select Tax Filing Status"
                 value={input.filingStatus}
                 onChange={(e) => setInput({ ...input, filingStatus: e.target.value as any })}
                 className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border font-bold text-xs"
@@ -115,18 +117,22 @@ export default function TaxRefundEstimatorPage() {
 
             <div className="grid grid-cols-2 gap-3">
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Annual Gross Income ($)</label>
+                <label htmlFor="grossIncome" className="text-[11px] text-slate-500 font-semibold">Annual Gross Income ($)</label>
                 <input
+                  id="grossIncome"
                   type="number"
+                  aria-label="Annual Gross Income"
                   value={input.grossIncome}
                   onChange={(e) => setInput({ ...input, grossIncome: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold"
                 />
               </div>
               <div className="space-y-1">
-                <label className="text-[11px] text-slate-500 font-semibold">Federal Tax Withheld ($)</label>
+                <label htmlFor="federalTaxPaid" className="text-[11px] text-slate-500 font-semibold">Federal Tax Withheld ($)</label>
                 <input
+                  id="federalTaxPaid"
                   type="number"
+                  aria-label="Federal Tax Withheld Amount"
                   value={input.federalTaxPaid}
                   onChange={(e) => setInput({ ...input, federalTaxPaid: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-lg bg-slate-50 dark:bg-slate-800 border text-xs font-bold text-emerald-600"

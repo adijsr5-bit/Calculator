@@ -161,7 +161,7 @@ export function Navbar() {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-2 bg-white/95 dark:bg-slate-900/95 border border-purple-100 dark:border-slate-800 rounded-3xl p-5 space-y-4 shadow-2xl backdrop-blur-2xl max-h-[80vh] overflow-y-auto animate-in fade-in slide-in-from-top-3 duration-300">
+        <nav aria-label="Mobile Navigation" role="navigation" className="md:hidden mt-2 bg-white/95 dark:bg-slate-900/95 border border-purple-100 dark:border-slate-800 rounded-3xl p-5 space-y-4 shadow-2xl backdrop-blur-2xl max-h-[80vh] overflow-y-auto animate-in fade-in slide-in-from-top-3 duration-300">
           {/* Quick Controls Bar */}
           <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
             <div className="flex items-center gap-2">
@@ -248,7 +248,7 @@ export function Navbar() {
               ))}
             </div>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );

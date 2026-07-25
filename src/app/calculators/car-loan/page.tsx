@@ -107,11 +107,12 @@ export default function CarLoanCalculatorPage() {
             <h2 className="text-lg font-bold text-slate-950 dark:text-white flex items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-3">
               <Car className="w-5 h-5 text-[#6D5DF6]" /> Auto Loan Details
             </h2>
-
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-700 dark:text-slate-300">Vehicle Price ($)</label>
+              <label htmlFor="vehiclePrice" className="text-xs font-semibold text-slate-700 dark:text-slate-300">Vehicle Price ($)</label>
               <input
+                id="vehiclePrice"
                 type="number"
+                aria-label="Vehicle Purchase Price"
                 value={input.vehiclePrice}
                 onChange={(e) => setInput({ ...input, vehiclePrice: Number(e.target.value) || 0 })}
                 className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-bold text-slate-900 dark:text-white text-sm"
@@ -120,18 +121,22 @@ export default function CarLoanCalculatorPage() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Cash Down ($)</label>
+                <label htmlFor="downPayment" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Cash Down ($)</label>
                 <input
+                  id="downPayment"
                   type="number"
+                  aria-label="Cash Down Payment"
                   value={input.downPayment}
                   onChange={(e) => setInput({ ...input, downPayment: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white text-sm"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Trade-In Allowance ($)</label>
+                <label htmlFor="tradeInValue" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Trade-In Allowance ($)</label>
                 <input
+                  id="tradeInValue"
                   type="number"
+                  aria-label="Vehicle Trade-In Allowance"
                   value={input.tradeInValue}
                   onChange={(e) => setInput({ ...input, tradeInValue: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white text-sm"
@@ -141,37 +146,43 @@ export default function CarLoanCalculatorPage() {
 
             <div className="grid grid-cols-3 gap-3">
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Sales Tax (%)</label>
+                <label htmlFor="salesTaxPercent" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Sales Tax (%)</label>
                 <input
+                  id="salesTaxPercent"
                   type="number"
                   step="0.1"
+                  aria-label="Sales Tax Percentage"
                   value={input.salesTaxPercent}
                   onChange={(e) => setInput({ ...input, salesTaxPercent: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white text-sm"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Interest APR (%)</label>
+                <label htmlFor="interestRate" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Interest APR (%)</label>
                 <input
+                  id="interestRate"
                   type="number"
                   step="0.1"
+                  aria-label="Interest APR Percentage"
                   value={input.interestRate}
                   onChange={(e) => setInput({ ...input, interestRate: Number(e.target.value) || 0 })}
                   className="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white text-sm"
                 />
               </div>
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-600 dark:text-slate-400">Term (Months)</label>
+                <label htmlFor="loanTermMonths" className="text-xs font-semibold text-slate-600 dark:text-slate-400">Term (Months)</label>
                 <select
+                  id="loanTermMonths"
+                  aria-label="Loan Term Months"
                   value={input.loanTermMonths}
                   onChange={(e) => setInput({ ...input, loanTermMonths: Number(e.target.value) })}
-                  className="w-full px-3 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white text-sm"
+                  className="w-full px-2 py-2 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold text-slate-900 dark:text-white text-xs"
                 >
-                  <option value={36}>36 Mos</option>
-                  <option value={48}>48 Mos</option>
-                  <option value={60}>60 Mos</option>
-                  <option value={72}>72 Mos</option>
-                  <option value={84}>84 Mos</option>
+                  <option value={36}>36 Months (3 yrs)</option>
+                  <option value={48}>48 Months (4 yrs)</option>
+                  <option value={60}>60 Months (5 yrs)</option>
+                  <option value={72}>72 Months (6 yrs)</option>
+                  <option value={84}>84 Months (7 yrs)</option>
                 </select>
               </div>
             </div>

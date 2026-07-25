@@ -276,6 +276,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <button
               onClick={() => setQuizGoal("mortgage")}
+              aria-label="Select goal: Buy or Refinance Home"
               className={`p-5 rounded-2xl border text-left transition-all ${
                 quizGoal === "mortgage"
                   ? "bg-[#6D5DF6] text-white border-[#6D5DF6] shadow-purple"
@@ -289,6 +290,7 @@ export default function HomePage() {
 
             <button
               onClick={() => setQuizGoal("debt")}
+              aria-label="Select goal: Pay Off Credit Cards and Loans"
               className={`p-5 rounded-2xl border text-left transition-all ${
                 quizGoal === "debt"
                   ? "bg-[#6D5DF6] text-white border-[#6D5DF6] shadow-purple"
@@ -302,6 +304,7 @@ export default function HomePage() {
 
             <button
               onClick={() => setQuizGoal("wealth")}
+              aria-label="Select goal: Build Retirement and Wealth"
               className={`p-5 rounded-2xl border text-left transition-all ${
                 quizGoal === "wealth"
                   ? "bg-[#6D5DF6] text-white border-[#6D5DF6] shadow-purple"

@@ -311,6 +311,7 @@ export default function DebtPayoffPlannerPage() {
             </div>
             <input
               type="range"
+              aria-label="Extra Monthly Payoff Budget Slider"
               min="0"
               max="2000"
               step="25"

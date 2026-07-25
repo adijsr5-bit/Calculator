@@ -64,6 +64,21 @@ export const metadata: Metadata = {
 };
 
 import Script from "next/script";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -73,12 +88,12 @@ export default function RootLayout({
   const adsenseClientId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-9657690036702429";
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="google-site-verification" content="ZbuthJm7kqi-5-WV6Z8Dvlvo_udMkHgFFfSTDfuS2uA" />
         <meta name="google-adsense-account" content="ca-pub-9657690036702429" />
+        <meta name="agentic-browsing-enabled" content="true" />
+        <meta name="webmcp-compliant" content="true" />
         <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
@@ -87,11 +102,23 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-[#6D5DF6] selection:text-white max-w-full overflow-x-hidden relative">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#6D5DF6] focus:text-white focus:rounded-xl text-xs font-bold"
+        >
+          Skip to main content
+        </a>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <CurrencyProvider>
-            <Navbar />
-            <main className="flex-1 w-full max-w-full overflow-x-hidden">{children}</main>
-            <Footer />
+            <div role="banner">
+              <Navbar />
+            </div>
+            <main id="main-content" tabIndex={-1} role="main" className="flex-1 w-full max-w-full overflow-x-hidden outline-none">
+              {children}
+            </main>
+            <div role="contentinfo">
+              <Footer />
+            </div>
             <AIAssistantModal />
             <CookieBanner />
           </CurrencyProvider>
