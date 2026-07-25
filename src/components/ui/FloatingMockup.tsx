@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { TrendingUp, ShieldCheck, Zap, ArrowRight, Home, CreditCard, PiggyBank, Sparkles, CheckCircle2 } from "lucide-react";
 import { formatCurrency } from "@/lib/utils";
 import { useCurrency } from "@/context/CurrencyContext";
@@ -39,25 +38,15 @@ export function FloatingMockup() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#6D5DF6]/20 rounded-full blur-3xl pointer-events-none" />
 
       {/* FLOATING STATUS BADGE 1: Top Right */}
-      <motion.div
-        initial={{ y: 0 }}
-        animate={{ y: [-4, 4, -4] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -top-3 -right-2 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-purple-100 dark:border-slate-800 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-bold text-slate-800 dark:text-white"
-      >
-        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+      <div className="absolute -top-3 -right-2 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-purple-100 dark:border-slate-800 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-2 text-xs font-bold text-slate-800 dark:text-white animate-pulse">
+        <span className="w-2 h-2 rounded-full bg-emerald-500" />
         <span className="text-[#6D5DF6]">Live Math Engine</span>
-      </motion.div>
+      </div>
 
       {/* FLOATING STATUS BADGE 2: Bottom Left */}
-      <motion.div
-        initial={{ y: 0 }}
-        animate={{ y: [4, -4, 4] }}
-        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute -bottom-3 -left-2 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-purple-100 dark:border-slate-800 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300"
-      >
+      <div className="absolute -bottom-3 -left-2 z-30 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-purple-100 dark:border-slate-800 px-3.5 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 text-xs font-semibold text-slate-600 dark:text-slate-300">
         <ShieldCheck className="w-3.5 h-3.5 text-[#6D5DF6]" /> Bank-Grade Security
-      </motion.div>
+      </div>
 
       {/* MAIN PURPLE GLASS CARD CONTAINER */}
       <div className="relative z-20 rounded-3xl bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl border border-purple-100/90 dark:border-slate-800 p-6 shadow-xl shadow-purple-500/10 space-y-5">
@@ -99,11 +88,8 @@ export function FloatingMockup() {
 
         {/* TAB 1: MORTGAGE */}
         {activeTab === "mortgage" && (
-          <motion.div
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="space-y-4"
+          <div
+            className="space-y-4 animate-in fade-in duration-200"
           >
             <div className="p-4 rounded-2xl purple-gradient-card flex items-center justify-between shadow-md">
               <div>
@@ -161,16 +147,13 @@ export function FloatingMockup() {
               <span>Full Amortization Table</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
-          </motion.div>
+          </div>
         )}
 
         {/* TAB 2: DEBT PAYOFF */}
         {activeTab === "debt" && (
-          <motion.div
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="space-y-4"
+          <div
+            className="space-y-4 animate-in fade-in duration-200"
           >
             <div className="p-4 rounded-2xl purple-gradient-card flex items-center justify-between shadow-md">
               <div>
@@ -228,16 +211,13 @@ export function FloatingMockup() {
               <span>Calculate Avalanche Strategy</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
-          </motion.div>
+          </div>
         )}
 
         {/* TAB 3: WEALTH GROWTH */}
         {activeTab === "wealth" && (
-          <motion.div
-            initial={{ opacity: 0, y: 6 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="space-y-4"
+          <div
+            className="space-y-4 animate-in fade-in duration-200"
           >
             <div className="p-4 rounded-2xl purple-gradient-card flex items-center justify-between shadow-md">
               <div>
@@ -295,7 +275,7 @@ export function FloatingMockup() {
               <span>Compound Wealth Calculator</span>
               <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>

@@ -4,8 +4,8 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { CurrencyProvider } from "@/context/CurrencyContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { AIAssistantModal } from "@/components/ui/AIAssistantModal";
-import { CookieBanner } from "@/components/ui/CookieBanner";
+import { AdSenseScript } from "@/components/AdSenseScript";
+import { ClientProviders } from "@/components/ClientProviders";
 
 export const metadata: Metadata = {
   title: {
@@ -94,13 +94,7 @@ export default function RootLayout({
         <meta name="google-adsense-account" content="ca-pub-9657690036702429" />
         <meta name="agentic-browsing-enabled" content="true" />
         <meta name="webmcp-compliant" content="true" />
-        <Script
-          id="adsbygoogle-init"
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
-          crossOrigin="anonymous"
-          strategy="lazyOnload"
-        />
+        <AdSenseScript clientId={adsenseClientId} />
       </head>
       <body className="min-h-screen flex flex-col font-sans antialiased selection:bg-[#6D5DF6] selection:text-white max-w-full overflow-x-hidden relative">
         <a
@@ -111,17 +105,17 @@ export default function RootLayout({
         </a>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <CurrencyProvider>
-            <header role="banner">
-              <Navbar />
-            </header>
-            <main id="main-content" tabIndex={-1} role="main" className="flex-1 w-full max-w-full overflow-x-hidden outline-none">
-              {children}
-            </main>
-            <footer role="contentinfo">
-              <Footer />
-            </footer>
-            <AIAssistantModal />
-            <CookieBanner />
+            <ClientProviders>
+              <header role="banner">
+                <Navbar />
+              </header>
+              <main id="main-content" tabIndex={-1} role="main" className="flex-1 w-full max-w-full overflow-x-hidden outline-none">
+                {children}
+              </main>
+              <footer role="contentinfo">
+                <Footer />
+              </footer>
+            </ClientProviders>
           </CurrencyProvider>
         </ThemeProvider>
       </body>
