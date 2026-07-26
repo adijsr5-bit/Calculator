@@ -3,7 +3,7 @@ import { BLOG_POSTS } from "@/lib/blogData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://valuepilot.vercel.app";
-  const now = new Date();
+  const today = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
 
   const primaryRoutes = [
     { route: "", priority: 1.0, changeFreq: "daily" as const },
@@ -29,14 +29,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogArticleRoutes = BLOG_POSTS.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: now,
+    lastModified: today,
     changeFrequency: "weekly" as const,
     priority: 0.85,
   }));
 
   const mainEntries: MetadataRoute.Sitemap = primaryRoutes.map((item) => ({
     url: `${baseUrl}${item.route}`,
-    lastModified: now,
+    lastModified: today,
     changeFrequency: item.changeFreq,
     priority: item.priority,
   }));

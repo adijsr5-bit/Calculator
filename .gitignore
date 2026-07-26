@@ -3,6 +3,10 @@
 /.pnp
 .pnp.js
 
+# service account secrets
+service-account.json
+*.json.secret
+
 # testing
 /coverage
 
