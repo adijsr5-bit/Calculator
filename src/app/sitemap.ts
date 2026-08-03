@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { route: "/blog", priority: 0.85, changeFreq: "daily" as const },
     { route: "/glossary", priority: 0.8, changeFreq: "weekly" as const },
     { route: "/about", priority: 0.7, changeFreq: "monthly" as const },
+    { route: "/editorial-policy", priority: 0.7, changeFreq: "monthly" as const },
     { route: "/contact", priority: 0.7, changeFreq: "monthly" as const },
     { route: "/privacy", priority: 0.5, changeFreq: "monthly" as const },
     { route: "/terms", priority: 0.5, changeFreq: "monthly" as const },

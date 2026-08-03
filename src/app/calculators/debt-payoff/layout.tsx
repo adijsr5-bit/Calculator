@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "pay off 20k debt",
   ],
   alternates: {
-    canonical: "https://valuepilot.vercel.app/debt-payoff-calculator",
+    canonical: "https://valuepilot.vercel.app/calculators/debt-payoff",
   },
   openGraph: {
     title: "Free Debt Payoff Calculator & Planner | ValuePilot",
     description:
       "Eliminate debt faster with Snowball vs Avalanche strategy comparisons, amortization schedules, and custom PDF exports.",
-    url: "https://valuepilot.vercel.app/debt-payoff-calculator",
+    url: "https://valuepilot.vercel.app/calculators/debt-payoff",
     siteName: "ValuePilot",
     type: "website",
   },
@@ -41,9 +41,9 @@ export default function DebtPayoffLayout({ children }: { children: React.ReactNo
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.vercel.app/debt-payoff-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/calculators/debt-payoff/#webapp",
         "name": "ValuePilot Debt Payoff Planner",
-        "url": "https://valuepilot.vercel.app/debt-payoff-calculator",
+        "url": "https://valuepilot.vercel.app/calculators/debt-payoff",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript",

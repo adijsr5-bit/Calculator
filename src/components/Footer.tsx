@@ -98,8 +98,11 @@ export function Footer() {
           </div>
 
           <div className="space-y-3 text-xs">
-            <div className="font-bold text-white uppercase tracking-wider" role="heading" aria-level={3}>Legal</div>
+            <div className="font-bold text-white uppercase tracking-wider" role="heading" aria-level={3}>Company & Trust</div>
             <ul className="space-y-2 text-slate-300">
+              <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+              <li><Link href="/editorial-policy" className="hover:text-white">Editorial Policy</Link></li>
+              <li><Link href="/contact" className="hover:text-white">Contact Us</Link></li>
               <li><Link href="/privacy" className="hover:text-white">Privacy Policy</Link></li>
               <li><Link href="/terms" className="hover:text-white">Terms of Use</Link></li>
               <li><Link href="/disclaimer" className="hover:text-white">Disclaimer</Link></li>

@@ -17,13 +17,13 @@ export const metadata: Metadata = {
     "mortgage amortization schedule",
   ],
   alternates: {
-    canonical: "https://valuepilot.vercel.app/mortgage-calculator",
+    canonical: "https://valuepilot.vercel.app/calculators/mortgage",
   },
   openGraph: {
     title: "Mortgage Calculator with Taxes & Amortization | ValuePilot",
     description:
       "Accurate 30-year and 15-year mortgage payment calculations with breakdown of P&I, taxes, insurance, HOA, and PMI.",
-    url: "https://valuepilot.vercel.app/mortgage-calculator",
+    url: "https://valuepilot.vercel.app/calculators/mortgage",
     siteName: "ValuePilot",
     type: "website",
   },
@@ -40,9 +40,9 @@ export default function MortgageLayout({ children }: { children: React.ReactNode
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.vercel.app/mortgage-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/calculators/mortgage/#webapp",
         "name": "ValuePilot Mortgage Payment Calculator",
-        "url": "https://valuepilot.vercel.app/mortgage-calculator",
+        "url": "https://valuepilot.vercel.app/calculators/mortgage",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript",

@@ -14,26 +14,31 @@ export const metadata: Metadata = {
     "max out 401k",
   ],
   alternates: {
-    canonical: "https://valuepilot.vercel.app/401k-calculator",
+    canonical: "https://valuepilot.vercel.app/calculators/401k",
   },
   openGraph: {
-    title: "Free 401(k) Calculator with Employer Match | ValuePilot",
-    description: "Calculate compound 401(k) growth with employer match contributions.",
-    url: "https://valuepilot.vercel.app/401k-calculator",
+    title: "401(k) Match & Retirement Growth Calculator | ValuePilot",
+    description: "Calculate employer 401(k) match, compound growth, and total retirement balance.",
+    url: "https://valuepilot.vercel.app/calculators/401k",
     siteName: "ValuePilot",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "401(k) Match Calculator | ValuePilot",
+    description: "Calculate employer 401k match and retirement growth.",
+  },
 };
 
-export default function FourZeroOneKLayout({ children }: { children: React.ReactNode }) {
+export default function FourOhOneKLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.vercel.app/401k-calculator/#webapp",
-        "name": "ValuePilot 401(k) Calculator",
-        "url": "https://valuepilot.vercel.app/401k-calculator",
+        "@id": "https://valuepilot.vercel.app/calculators/401k/#webapp",
+        "name": "ValuePilot 401k Calculator",
+        "url": "https://valuepilot.vercel.app/calculators/401k",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

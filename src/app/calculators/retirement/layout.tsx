@@ -14,14 +14,19 @@ export const metadata: Metadata = {
     "inflation adjusted retirement planner",
   ],
   alternates: {
-    canonical: "https://valuepilot.vercel.app/retirement-calculator",
+    canonical: "https://valuepilot.vercel.app/calculators/retirement",
   },
   openGraph: {
-    title: "Retirement Calculator & Nest Egg Estimator | ValuePilot",
-    description: "Plan your retirement nest egg with inflation adjustments and compound growth.",
-    url: "https://valuepilot.vercel.app/retirement-calculator",
+    title: "Retirement Savings Calculator | ValuePilot",
+    description: "Calculate your estimated retirement nest egg and inflation-adjusted monthly income.",
+    url: "https://valuepilot.vercel.app/calculators/retirement",
     siteName: "ValuePilot",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Retirement Savings Calculator | ValuePilot",
+    description: "Plan your retirement nest egg with compound interest.",
   },
 };
 
@@ -31,9 +36,9 @@ export default function RetirementLayout({ children }: { children: React.ReactNo
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.vercel.app/retirement-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/calculators/retirement/#webapp",
         "name": "ValuePilot Retirement Calculator",
-        "url": "https://valuepilot.vercel.app/retirement-calculator",
+        "url": "https://valuepilot.vercel.app/calculators/retirement",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

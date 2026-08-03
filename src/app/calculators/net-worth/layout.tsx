@@ -14,14 +14,19 @@ export const metadata: Metadata = {
     "financial health score",
   ],
   alternates: {
-    canonical: "https://valuepilot.vercel.app/net-worth-calculator",
+    canonical: "https://valuepilot.vercel.app/calculators/net-worth",
   },
   openGraph: {
-    title: "Free Net Worth Calculator & Financial Health Tracker | ValuePilot",
-    description: "Track total assets, liabilities, and overall financial health score.",
-    url: "https://valuepilot.vercel.app/net-worth-calculator",
+    title: "Net Worth Calculator | ValuePilot",
+    description: "Calculate your total net worth by balancing real assets against liabilities.",
+    url: "https://valuepilot.vercel.app/calculators/net-worth",
     siteName: "ValuePilot",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Net Worth Calculator | ValuePilot",
+    description: "Track your personal assets and liabilities.",
   },
 };
 
@@ -31,9 +36,9 @@ export default function NetWorthLayout({ children }: { children: React.ReactNode
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.vercel.app/net-worth-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/calculators/net-worth/#webapp",
         "name": "ValuePilot Net Worth Calculator",
-        "url": "https://valuepilot.vercel.app/net-worth-calculator",
+        "url": "https://valuepilot.vercel.app/calculators/net-worth",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },

@@ -122,16 +122,16 @@ export default async function BlogPostDetailPage({
         </h3>
         <p className="text-xs text-slate-500">Calculate your personal numbers instantly using ValuePilot tools:</p>
         <div className="flex flex-wrap gap-3 pt-2">
-          <Link href="/mortgage-calculator" className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-[#6D5DF6] shadow-sm hover:underline">
+          <Link href="/calculators/mortgage" className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-[#6D5DF6] shadow-sm hover:underline">
             Mortgage Calculator
           </Link>
-          <Link href="/debt-payoff-calculator" className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-[#6D5DF6] shadow-sm hover:underline">
+          <Link href="/calculators/debt-payoff" className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-[#6D5DF6] shadow-sm hover:underline">
             Debt Payoff Planner
           </Link>
-          <Link href="/budget-planner" className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-[#6D5DF6] shadow-sm hover:underline">
+          <Link href="/calculators/budget" className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-[#6D5DF6] shadow-sm hover:underline">
             50/30/20 Budget Planner
           </Link>
-          <Link href="/retirement-calculator" className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-[#6D5DF6] shadow-sm hover:underline">
+          <Link href="/calculators/retirement" className="px-4 py-2 rounded-xl bg-white dark:bg-slate-800 text-xs font-bold text-[#6D5DF6] shadow-sm hover:underline">
             Retirement Growth
           </Link>
         </div>

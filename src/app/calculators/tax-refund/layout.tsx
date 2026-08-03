@@ -14,14 +14,19 @@ export const metadata: Metadata = {
     "w4 tax withholding calculator",
   ],
   alternates: {
-    canonical: "https://valuepilot.vercel.app/tax-refund-calculator",
+    canonical: "https://valuepilot.vercel.app/calculators/tax-refund",
   },
   openGraph: {
-    title: "Tax Refund Calculator & Federal Bracket Estimator | ValuePilot",
-    description: "Estimate your 2026 federal income tax refund and effective tax rate.",
-    url: "https://valuepilot.vercel.app/tax-refund-calculator",
+    title: "Income Tax Refund Calculator | ValuePilot",
+    description: "Estimate your 2026 federal tax refund based on W-2 withholdings and deductions.",
+    url: "https://valuepilot.vercel.app/calculators/tax-refund",
     siteName: "ValuePilot",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Income Tax Refund Calculator | ValuePilot",
+    description: "Estimate your tax refund with 2026 IRS brackets.",
   },
 };
 
@@ -31,9 +36,9 @@ export default function TaxRefundLayout({ children }: { children: React.ReactNod
     "@graph": [
       {
         "@type": "WebApplication",
-        "@id": "https://valuepilot.vercel.app/tax-refund-calculator/#webapp",
+        "@id": "https://valuepilot.vercel.app/calculators/tax-refund/#webapp",
         "name": "ValuePilot Tax Refund Calculator",
-        "url": "https://valuepilot.vercel.app/tax-refund-calculator",
+        "url": "https://valuepilot.vercel.app/calculators/tax-refund",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "All",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
